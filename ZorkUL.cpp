@@ -105,7 +105,8 @@ bool ZorkUL::processCommand(Command command) {
         cout << "         |         " << endl;
         cout << "         |         " << endl;
         cout << "[i] --- [d] --- [e]" << endl;
-        cout << " |" << endl;
+        cout << " ." << endl;
+        cout << " ." << endl;
         cout << "[j]]" << endl;
     }
 
