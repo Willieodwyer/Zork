@@ -139,7 +139,7 @@ bool ZorkUL::processCommand(Command command) {
     // Go to a random room
     else if (commandWord.compare("teleport") == 0){
 
-        switch(rand() % 11)
+        switch((rand() % 10) + 1)
         {
             case 1  : currentRoom = a; break;
             case 2  : currentRoom = b; break;
@@ -156,7 +156,7 @@ bool ZorkUL::processCommand(Command command) {
 
 
         currentRoom->longDescription();
-        cout << "You have teleported!!!\n" << endl;
+        cout << "You have teleported to a random location!!!" << endl;
         cout << currentRoom->longDescription() << endl;
     }
     /*
