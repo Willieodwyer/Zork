@@ -1,4 +1,5 @@
 #include <iostream>
+//#include <QApplication>
 
 using namespace std;
 #include "ZorkUL.h"
@@ -7,7 +8,7 @@ using namespace std;
 #include <cstring>
 #include <cstdlib>
 
-int main(void) {
+int main(int argv, char **args) {
     ZorkUL temp;
     temp.play();
     return 0;
