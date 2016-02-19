@@ -7,8 +7,14 @@ using namespace std;
 #include <stdio.h>
 #include <cstring>
 #include <cstdlib>
+#include "mainwindow.h"
+#include <QApplication>
 
-int main(int argv, char **args) {
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
     ZorkUL temp;
     temp.play();
     return 0;
