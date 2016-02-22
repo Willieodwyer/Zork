@@ -1,5 +1,4 @@
 #include <iostream>
-//#include <QApplication>
 
 using namespace std;
 #include "ZorkUL.h"
@@ -7,16 +6,23 @@ using namespace std;
 #include <stdio.h>
 #include <cstring>
 #include <cstdlib>
-#include "mainwindow.h"
-#include <QApplication>
 #include <QDebug>
 
+<<<<<<< .mine
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
     qDebug() << "debug test";
     w.show();
+=======
+int main(void) {
+
+
+
+
+
+>>>>>>> .theirs
     ZorkUL temp;
     temp.play();
     return 0;
