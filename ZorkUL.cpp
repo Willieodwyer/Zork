@@ -9,11 +9,13 @@ using namespace std;
 #include <cstdlib>
 #include "mainwindow.h"
 #include <QApplication>
+#include <QDebug>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     MainWindow w;
+    qDebug() << "debug test";
     w.show();
     ZorkUL temp;
     temp.play();

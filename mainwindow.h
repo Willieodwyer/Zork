@@ -3,6 +3,10 @@
 
 #include <QMainWindow>
 
+QT_BEGIN_NAMESPACE
+class QPushButton;
+QT_END_NAMESPACE
+
 namespace Ui {
 class MainWindow;
 }
@@ -17,6 +21,8 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+    QPushButton *Info;
 };
 
 #endif // MAINWINDOW_H
