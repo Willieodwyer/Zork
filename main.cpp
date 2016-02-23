@@ -25,8 +25,8 @@ int main(int argc, char *argv[]){
     QGraphicsView * view = new QGraphicsView(scene);
 
     // show the view
-    view->setFixedSize(1280,720);
-    scene->setSceneRect(0,0,1200,700);
+    view->setFixedSize(1282,722);
+    scene->setSceneRect(0,0,1280,720);
     view->show();
 
     return a.exec();
