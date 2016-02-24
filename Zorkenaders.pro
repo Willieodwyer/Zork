@@ -19,3 +19,6 @@ HEADERS  += \
     MyRect.h
 
 FORMS    +=
+
+RESOURCES += \
+    assets.qrc

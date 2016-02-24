@@ -1,28 +1,32 @@
 #include "MyRect.h"
 #include <QKeyEvent>
 #include <QDebug>
+#include <QSet>
+#include <QThread>
 
 void MyRect::keyPressEvent(QKeyEvent *event){
+
     switch (event->key()) {
     //left righ up and down
     case Qt::Key_A:
         setPos(x()-15,y());
-        qDebug() << "LEFT/a";
+        //qDebug() << "LEFT(a)";
         break;
     case Qt::Key_D:
         setPos(x()+15,y());
-        qDebug() << "RIGHT/d";
+        //qDebug() << "RIGHT(d)";
         break;
     case Qt::Key_W:
         setPos(x(),y()-15);
-        qDebug() << "UP/w";
+        //qDebug() << "UP(w)";
         break;
     case Qt::Key_S:
         setPos(x(),y()+15);
-        qDebug() << "DOWN/s";
+        //qDebug() << "DOWN(s)";
         break;
     default:
-        qDebug() << "Wrong KEY!!!";
+        //qDebug() << "Wrong KEY!!!";
         break;
     }
 }
+
