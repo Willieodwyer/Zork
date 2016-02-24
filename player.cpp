@@ -1,10 +1,18 @@
-#include "MyRect.h"
+#include "player.h"
 #include <QKeyEvent>
 #include <QDebug>
-#include <QSet>
-#include <QThread>
+#include <QPixmap>
+#include <QGraphicsPixmapItem>
+#include <QPixmap>
+#define SCALE 0.511
 
-void MyRect::keyPressEvent(QKeyEvent *event){
+
+Player::Player(){
+    setPixmap(QPixmap(":/images/pacman-ghost-128.png"));
+    setScale(SCALE/2);
+}
+
+void Player::keyPressEvent(QKeyEvent *event){
 
     switch (event->key()) {
     //left righ up and down

@@ -13,10 +13,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp \
-    MyRect.cpp
+    player.cpp
 
 HEADERS  += \
-    MyRect.h
+    player.h
 
 FORMS    +=
 
