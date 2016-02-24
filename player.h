@@ -1,16 +1,15 @@
 #ifndef MYRECT_H
 #define MYRECT_H
 
-#include <QGraphicsRectItem>
+#include <QGraphicsPixmapItem>
 #include <QSet>
 
-class MyRect: public QGraphicsRectItem{
-private:
-    QSet<int> pressedKeys;
+class Player: public QGraphicsPixmapItem{
+
 public:
 
     void keyPressEvent(QKeyEvent * event);
-    void moveLeft();
+    Player();
 };
 
 #endif // MYRECT_H

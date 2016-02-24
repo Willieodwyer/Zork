@@ -1,5 +1,6 @@
 <RCC>
-    <qresource prefix="/assets">
-        <file>assets/img.png</file>
+    <qresource prefix="/images">
+        <file>img.png</file>
+        <file>pacman-ghost-128.png</file>
     </qresource>
 </RCC>
