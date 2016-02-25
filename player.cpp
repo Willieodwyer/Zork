@@ -4,11 +4,11 @@
 #include <QPixmap>
 #include <QGraphicsPixmapItem>
 #include <QPixmap>
-#define SCALE 0.511
+#define SCALE 0.5
 
 
 Player::Player(){
-    setPixmap(QPixmap(":/images/pacman-ghost-128.png"));
+    setPixmap(QPixmap(":/assets/assets/pacman-ghost-128.png"));
     setScale(SCALE/2);
 }
 
