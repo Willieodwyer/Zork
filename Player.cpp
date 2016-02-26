@@ -1,4 +1,4 @@
-#include "player.h"
+#include "Player.h"
 #include <QKeyEvent>
 #include <QDebug>
 #include <QPixmap>

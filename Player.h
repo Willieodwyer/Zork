@@ -1,5 +1,5 @@
-#ifndef MYRECT_H
-#define MYRECT_H
+#ifndef MYPLAYER_H
+#define MYPLAYER_H
 
 #include <QGraphicsPixmapItem>
 #include <QSet>
@@ -15,4 +15,4 @@ public:
     Player();
 };
 
-#endif // MYRECT_H
+#endif // MYPLAYER_H
