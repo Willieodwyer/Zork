@@ -4,6 +4,8 @@
 #
 #-------------------------------------------------
 
+QMAKE_CXX = ccache g++
+
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -13,10 +15,16 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp \
-    player.cpp
+    Player.cpp \
+    Room.cpp \
+    Item.cpp \
+    Game.cpp
 
 HEADERS  += \
-    player.h
+    Player.h \
+    Room.h \
+    Item.h \
+    Game.h
 
 FORMS    +=
 
