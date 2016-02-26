@@ -1,52 +1,58 @@
-#include "player.h"
+#include "Player.h"
 #include <QKeyEvent>
 #include <QDebug>
 #include <QPixmap>
 #include <QGraphicsPixmapItem>
 #include <QPixmap>
-#define SCALE 0.511
+#define SCALE 0.05
+#define DISTANCE 30
+
+//:/assets/assets/pacman-ghost-128-UP.png
+//:/assets/assets/pacman-ghost-128-DOWN.png
+//:/assets/assets/pacman-ghost-128-flipped.png
+//:/assets/assets/pacman-ghost-128.png
 
 
 Player::Player(){
-    setPixmap(QPixmap(":/images/pacman-ghost-128.png"));
-    setScale(SCALE/2);
+    setPixmap(QPixmap(":/assets/assets/pacman-ghost-128.png"));
+    setScale(SCALE);
+    setPos(x()+(DISTANCE*4),y()+(DISTANCE*21));
 }
 
 void Player::keyPressEvent(QKeyEvent *event){
-
-    switch (event->key()) {
-    //left righ up and down
-    case Qt::Key_A: case Qt::Key_Left:
-        setPos(x()-15,y());
-        //qDebug() << "LEFT(a)";
-        break;
-    case Qt::Key_D: case Qt::Key_Right:
-        setPos(x()+15,y());
-        //qDebug() << "RIGHT(d)";
-        break;
-    case Qt::Key_W: case Qt::Key_Up:
-        setPos(x(),y()-15);
-        //qDebug() << "UP(w)";
-        break;
-    case Qt::Key_S: case Qt::Key_Down:
-        setPos(x(),y()+15);
-        //qDebug() << "DOWN(s)";
-        break;
-    /*case Qt::Key_T:
-        switch (rand()%8){
-            case 0: setPos(200, 150);break;
-            case 1: setPos(200, 500);break;
-            case 2: setPos(500, 150);break;
-            case 3: setPos(500, 500);break;
-            case 4: setPos(800, 150);break;
-            case 5: setPos(800, 500);break;
-            case 6: setPos(1100, 150);break;
-            case 7: setPos(1100, 500);break;
-        //qDebug() << "TELEPORT(t)";
-        }*/
-    default:
-        //qDebug() << "Wrong KEY!!!";
-        break;
+    if(isInPlayableArea()){
+        switch (event->key()) {
+        //left righ up and down
+        case Qt::Key_A:
+            setPixmap(QPixmap(":/assets/assets/pacman-ghost-128-flipped.png"));
+            setPos(x()-DISTANCE,y());
+            //qDebug() << "LEFT(a)";
+            break;
+        case Qt::Key_D:
+            setPixmap(QPixmap(":/assets/assets/pacman-ghost-128.png"));
+            setPos(x()+DISTANCE,y());
+            //qDebug() << "RIGHT(d)";
+            break;
+        case Qt::Key_W:
+            setPixmap(QPixmap(":/assets/assets/pacman-ghost-128-UP.png"));
+            setPos(x(),y()-DISTANCE);
+            //qDebug() << "UP(w)";
+            break;
+        case Qt::Key_S:
+            setPixmap(QPixmap(":/assets/assets/pacman-ghost-128-DOWN.png"));
+            setPos(x(),y()+DISTANCE);
+            //qDebug() << "DOWN(s)";
+            break;
+        default:
+            //qDebug() << "Wrong KEY!!!";
+            break;
+        }
+        qDebug() << "X: " +  QString::number(x()) + " Y: " + QString::number(y());
     }
+}
+
+
+bool Player::isInPlayableArea(){
+    return true;
 }
 
