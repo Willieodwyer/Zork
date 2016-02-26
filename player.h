@@ -6,6 +6,9 @@
 
 class Player: public QGraphicsPixmapItem{
 
+private:
+    bool isInPlayableArea();
+
 public:
 
     void keyPressEvent(QKeyEvent * event);
