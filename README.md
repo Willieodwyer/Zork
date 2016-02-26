@@ -20,9 +20,13 @@ Add items to rooms           [N]
 
 Make buttons for commands    [N/A]
 
+#PENDING
 
 Come up with a story line    []
+
 Make a menu                  []
+
 Assets                       []
+
 Animations                   []
 Add a monster                []
