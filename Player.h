@@ -2,17 +2,18 @@
 #define MYPLAYER_H
 
 #include <QGraphicsPixmapItem>
-#include <QSet>
+#include "Room.h"
 
 class Player: public QGraphicsPixmapItem{
 
-private:
-    bool isInPlayableArea();
 
 public:
+    Player();
+
+    Room *hallway; // make this some sort of array of rooms
 
     void keyPressEvent(QKeyEvent * event);
-    Player();
+    bool isInRoom();
 };
 
 #endif // MYPLAYER_H

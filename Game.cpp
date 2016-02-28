@@ -1,5 +1,6 @@
 #include "Game.h"
 #include "Player.h"
+#include "Room.h"
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QtGlobal>
@@ -21,6 +22,7 @@ Game::Game()
 }
 
 void Game::play(){
+
     background->setScale(SCALE);
     background->setPixmap(QPixmap(":/assets/assets/Dungeon.jpg"));
 
