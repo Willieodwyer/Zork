@@ -5,5 +5,8 @@
         <file>assets/pacman-ghost-128-flipped.png</file>
         <file>assets/pacman-ghost-128-DOWN.png</file>
         <file>assets/pacman-ghost-128-UP.png</file>
+        <file>assets/pattern2.jpg</file>
+        <file>assets/pattern1.jpg</file>
+        <file>assets/pattern3.jpg</file>
     </qresource>
 </RCC>
