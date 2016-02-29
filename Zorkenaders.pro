@@ -13,13 +13,13 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp \
-    player.cpp \
     Game.cpp \
     Item.cpp \
     Room.cpp \
     mainmenu.cpp \
     scenariobox.cpp \
-    gamemenu.cpp
+    gamemenu.cpp \
+    Player.cpp
 
 HEADERS  += \
     player.h \
@@ -28,7 +28,8 @@ HEADERS  += \
     Room.h \
     mainmenu.h \
     scenariobox.h \
-    gamemenu.h
+    gamemenu.h \
+    Player.h
 
 FORMS    += \
     mainmenu.ui \
