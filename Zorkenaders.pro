@@ -13,12 +13,27 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp \
-    MyRect.cpp
+    player.cpp \
+    Game.cpp \
+    Item.cpp \
+    Room.cpp \
+    mainmenu.cpp \
+    scenariobox.cpp \
+    gamemenu.cpp
 
 HEADERS  += \
-    MyRect.h
+    player.h \
+    Game.h \
+    Item.h \
+    Room.h \
+    mainmenu.h \
+    scenariobox.h \
+    gamemenu.h
 
-FORMS    +=
+FORMS    += \
+    mainmenu.ui \
+    scenariobox.ui \
+    gamemenu.ui
 
 RESOURCES += \
     assets.qrc

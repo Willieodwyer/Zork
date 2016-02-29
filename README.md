@@ -1,23 +1,50 @@
-# Zork
 # TODO
 
-Make Project into GUI app    [W]
-
-Get it to render             [W]
-
-Make a sketch of layout      [W]
+# Will
 
 
-Figure out the logging thing [N]
+Make Project into GUI app               [DONE]
 
-Add items to rooms           [N]
+Get it to render                        [DONE]
 
-Make buttons for commands    [N]
+Add game class                          [DONE]
+
+Make a sketch of layout                 [CHANGED]
+
+Character Header                        [IN PROGRESS]
+
+#Niall
+Make main menu                          [DONE - MAY REQUIRE CHANGES/IMPROVEMENTS]
+
+Make in game menu                       [IN PROGRESS]
+
+Make Scenario window                    [DONE]
+
+Figure out transition between windows   []
+
+Figure out the logging thing            [N]
+
+Add items to rooms                      [N]
+
+Make buttons for commands               [N/A]
+
+#PENDING
+
+Come up with a story line               []
+
+Assets                                  []
+
+Animations                              []
+
+Add a monster                           []
+
+Make help window showing game controls  []
+
+#IDEAS FOR IMPROVEMENT
+
+Create character                        []
+
+Save game/progress                      []
 
 
-Character Header             []
-Come up with a story line    []
-Make a menu                  []
-Assets                       []
-Animations                   []
-Add a monster                []
+
