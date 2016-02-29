@@ -1,6 +1,5 @@
 #include <QApplication>
-#include "Player.h"
-#include "Game.h"
+#include "mainmenu.h"
 
 #define SCALE 0.5
 #define RES_X 960
@@ -10,8 +9,8 @@
 int main(int argc, char *argv[]){
     QApplication a(argc, argv);
 
-    Game game;
-    game.play();
+    MainMenu menu;
+    menu.show();
 
     return a.exec();
 }

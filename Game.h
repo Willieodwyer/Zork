@@ -24,6 +24,7 @@ private:
 public:
     Game();
     void play();
+    void close();
 };
 
 #endif // GAME_H

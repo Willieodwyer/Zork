@@ -38,3 +38,7 @@ void Game::play(){
     view->show();
 }
 
+void Game::close(){
+    view->close();
+}
+
