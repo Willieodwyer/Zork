@@ -2,6 +2,7 @@
 #define MYPLAYER_H
 
 #include <QGraphicsPixmapItem>
+<<<<<<< HEAD
 #include <QSet>
 #include "gamemenu.h"
 #include "scenariobox.h"
@@ -14,11 +15,20 @@ private:
     void displayScenario();
     GameMenu menu;
     ScenarioBox sbox;
+=======
+#include "Room.h"
+
+class Player: public QGraphicsPixmapItem{
+
+>>>>>>> Wills
 
 public:
+    Player();
+
+    Room *hallway; // make this some sort of array of rooms
 
     void keyPressEvent(QKeyEvent * event);
-    Player();
+    bool isInRoom();
 };
 
 #endif // MYPLAYER_H

@@ -4,8 +4,12 @@
 #include <QPixmap>
 #include <QGraphicsPixmapItem>
 #include <QPixmap>
+<<<<<<< HEAD
 #include <QFuture>
 #include <QtConcurrent/QtConcurrent>
+=======
+#include "Room.h"
+>>>>>>> Wills
 #define SCALE 0.05
 #define DISTANCE 30
 
@@ -16,13 +20,16 @@
 
 
 Player::Player(){
+
+    hallway = new Room("hallway",120,510,180,660);
+
     setPixmap(QPixmap(":/assets/assets/pacman-ghost-128.png"));
     setScale(SCALE);
     setPos(x()+(DISTANCE*4),y()+(DISTANCE*21));
 }
 
 void Player::keyPressEvent(QKeyEvent *event){
-    if(isInPlayableArea()){
+    if(isInRoom()){
         switch (event->key()) {
         //left righ up and down
         case Qt::Key_A: case Qt::Key_Left:
@@ -62,6 +69,8 @@ void Player::keyPressEvent(QKeyEvent *event){
         }
         qDebug() << "X: " +  QString::number(x()) + " Y: " + QString::number(y());
     }
+    else
+        qDebug() << "Not in a room innit";
 }
 
 void Player::displayMenu(){
@@ -75,7 +84,14 @@ void Player::displayScenario(){
     qDebug() << sbox.optionSelected;
 }
 
-bool Player::isInPlayableArea(){
-    return true;
+bool Player::isInRoom(){
+    if(hallway->getY1() >= (y() + DISTANCE)/* &&
+            y() >= (hallway->getY1() - DISTANCE) &&
+            x() <= (hallway->getX2() + DISTANCE) &&
+            y() <= (hallway->getY2() + DISTANCE)*/
+        )
+        return true;
+    else
+       return false;
 }
 
