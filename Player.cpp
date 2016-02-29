@@ -22,39 +22,28 @@ Player::Player(){
 }
 
 void Player::keyPressEvent(QKeyEvent *event){
-    if(isInPlayableArea()){
+    if(isInRoom()){
         switch (event->key()) {
         //left righ up and down
-        case Qt::Key_A: case Qt::Key_Left:
+        case Qt::Key_A:
             setPixmap(QPixmap(":/assets/assets/pacman-ghost-128-flipped.png"));
             setPos(x()-DISTANCE,y());
             //qDebug() << "LEFT(a)";
             break;
-        case Qt::Key_D: case Qt::Key_Right:
+        case Qt::Key_D:
             setPixmap(QPixmap(":/assets/assets/pacman-ghost-128.png"));
             setPos(x()+DISTANCE,y());
             //qDebug() << "RIGHT(d)";
             break;
-        case Qt::Key_W: case Qt::Key_Up:
+        case Qt::Key_W:
             setPixmap(QPixmap(":/assets/assets/pacman-ghost-128-UP.png"));
             setPos(x(),y()-DISTANCE);
             //qDebug() << "UP(w)";
             break;
-        case Qt::Key_S: case Qt::Key_Down:
+        case Qt::Key_S:
             setPixmap(QPixmap(":/assets/assets/pacman-ghost-128-DOWN.png"));
             setPos(x(),y()+DISTANCE);
             //qDebug() << "DOWN(s)";
-            break;
-        case Qt::Key_F1:
-            qDebug() << "Help";
-            break;
-        case Qt::Key_F2:
-            qDebug() << "menu";
-            displayMenu();
-            break;
-        case Qt::Key_Space:
-            qDebug() << "Scenario";
-            displayScenario();
             break;
         default:
             //qDebug() << "Wrong KEY!!!";
@@ -64,18 +53,6 @@ void Player::keyPressEvent(QKeyEvent *event){
     }
 }
 
-void Player::displayMenu(){
-    menu.show();
-}
-
-void Player::displayScenario(){
-    sbox.setScenario("scenario title", "Insert scenario descrption here", "option 1", "option 2");
-    //QFuture<void> future = QtConcurrent::run(sbox.showScenario());// bool a = sbox.showScenario();
-    sbox.show();
-    qDebug() << sbox.optionSelected;
-}
-
-bool Player::isInPlayableArea(){
+bool Player::isInRoom(){
     return true;
 }
-
