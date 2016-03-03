@@ -16,8 +16,8 @@ class Room {
 private:
     string description;
     vector <Item> itemsInRoom;
-    int X1, Y1; // Coordinates of the room
-    int X2, Y2; // Coordinates of the room
+    int X1, Y1; // Coordinates of the top left corener
+    int X2, Y2; // Coordinates of the bottom right corner
 
 
 public:

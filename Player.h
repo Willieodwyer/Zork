@@ -14,7 +14,8 @@ public:
     Room *hallway; // make this some sort of array of rooms
 
     void keyPressEvent(QKeyEvent * event);
-    bool isInRoom();
+    enum directions { UP = 1, DOWN, LEFT, RIGHT};
+    bool canMove(directions d);
 };
 
 #endif // MYPLAYER_H
