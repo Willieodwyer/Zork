@@ -14,17 +14,17 @@ using std::vector;
 class Room {
 
 private:
-    string description;
+    QString description;
     vector <Item> itemsInRoom;
     int X1, Y1; // Coordinates of the top left corener
     int X2, Y2; // Coordinates of the bottom right corner
 
 
 public:
-    Room(string description, int x1, int y1, int x2, int y2);
+    Room(QString description, int x1, int y1, int x2, int y2);
 
-    string longDescription();
-    string displayItem();
+    QString longDescription();
+    QString displayItem();
 
     int numberOfItems();
     void addItem(Item *inItem);

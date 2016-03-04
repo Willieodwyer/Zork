@@ -16,10 +16,10 @@
 
 
 Player::Player(){
-    hallway = new Room("hallway",120, 510, 150, 630);
     setPixmap(QPixmap(":/assets/assets/pacman-ghost-128.png"));
     setScale(SCALE);
     setPos(x()+(DISTANCE*4),y()+(DISTANCE*21));
+    initRooms();
 }
 
 void Player::keyPressEvent(QKeyEvent *event){
@@ -61,35 +61,49 @@ void Player::keyPressEvent(QKeyEvent *event){
 }
 
 bool Player::canMove(directions d){
-    switch(d){
-    case UP:
-        //qDebug() << QString::number((y()) <= hallway->getY1());
-        if((y() - DISTANCE) >= 510){
-            return true;
+    for (int i = 0; i < NUM_OF_ROOMS;i++){
+        switch(d){
+        case UP:
+            //qDebug() << QString::number((y()) <= roomArray[0]->getY1());
+            if((y() - DISTANCE) >= roomArray[i]->getY1() && x() >= roomArray[i]->getX1()){
+                qDebug() << roomArray[i]->longDescription();
+                return true;
+            }
+            break;
+        case DOWN:
+            //qDebug() << QString::number((y()) <= hallway->getY2());
+            if((y() + DISTANCE) <= roomArray[i]->getY2() && x() <= roomArray[i]->getX2()){
+                qDebug() << roomArray[i]->longDescription();
+                return true;
+            }
+            break;
+        case LEFT:
+            //qDebug() << QString::number((x()) >= hallway->getX2());
+            if((x() - DISTANCE) >= roomArray[i]->getX1() && y() >= roomArray[i]->getY1()){
+                qDebug() << roomArray[i]->longDescription();
+                return true;
+            }
+            break;
+        case RIGHT:
+            //qDebug() << QString::number((x()) <= hallway->getX2());
+            if((x() + DISTANCE) <= roomArray[i]->getX2() && y() <= roomArray[i]->getY2()){
+                qDebug() << roomArray[i]->longDescription();
+                return true;
+            }
+            break;
+        default: return false; break;
         }
-        break;
-    case DOWN:
-        //qDebug() << QString::number((y()) <= hallway->getY2());
-        if((y() + DISTANCE) <= 630){
-            return true;
-        }
-        break;
-    case LEFT:
-        //qDebug() << QString::number((x()) >= hallway->getX2());
-        if((x() - DISTANCE) >= 120){
-            return true;
-        }
-        break;
-    case RIGHT:
-        //qDebug() << QString::number((x()) <= hallway->getX2());
-        if((x() + DISTANCE) <= 150){
-            return true;
-        }
-        break;
-    default: return false; break;
     }
     return false;
 }
+
+void Player::initRooms(){
+    roomArray = new Room *[2];
+    roomArray[0] = new Room("hallway",120, 510, 150, 630);
+    roomArray[1] = new Room("mainHall",60,120,210,480);
+}
+
+
 
 
 

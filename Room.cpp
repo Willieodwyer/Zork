@@ -1,7 +1,7 @@
 #include "Room.h"
 #include <QDebug>
 
-Room::Room(string description, int x1, int y1, int x2, int y2) {
+Room::Room(QString description, int x1, int y1, int x2, int y2) {
     X1 = x1;
     X2 = x2;
     Y1 = y1;
@@ -10,15 +10,15 @@ Room::Room(string description, int x1, int y1, int x2, int y2) {
 }
 
 
-string Room::longDescription() {
-    return "room = " + description;
+QString Room::longDescription() {
+    return description;
 }
 
 void Room::addItem(Item *inItem) {
     itemsInRoom.push_back(*inItem);
 }
 
-string Room::displayItem() {
+QString Room::displayItem() {
 
     return "TODO: implement this";
     }
