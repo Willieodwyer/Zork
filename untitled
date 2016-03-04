@@ -1,3 +1,11 @@
-hallway		120	510	150	630
-mainHall	60	120	210	480
-goldSteps	240	300	240	330
+start       120	510	150	630
+mainBOT	  	060	450	210	480
+mainBotDiv	090	420	180	420
+mainMID	  	060	210	210	390
+mainTopDiv	090	180	180	180
+mainTop	  	060	150	210	150
+mainTopL  	060	120	090	120
+mainTopR  	180	120	210	120
+goldSteps 	240	300	240	330
+midCorridor	270	300	480	330
+littleCub   390 360 390 360
