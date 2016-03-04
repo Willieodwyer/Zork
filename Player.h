@@ -6,7 +6,7 @@
 #include "gamemenu.h"
 #include "scenariobox.h"
 #include "Room.h"
-#define NUM_OF_ROOMS 2
+#define NUM_OF_ROOMS 3
 
 class Player: public QGraphicsPixmapItem{
 
