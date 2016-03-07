@@ -3,9 +3,13 @@
 # Will
 
 Item
+
 smooth movement
+
 Add a monster                       could be done towards the end
+
 add rrow keys
+
 add space bar to trigger an event
 
 
