@@ -6,19 +6,30 @@
 #include "gamemenu.h"
 #include "scenariobox.h"
 #include "Room.h"
-#define NUM_OF_ROOMS 42
+#include <vector>
+
+#define NUM_OF_ROOMS 45
+
+using namespace std;
 
 class Player: public QGraphicsPixmapItem{
 
 public:
     Player();
 
+    QVector <QString> items;
+    Room *currentRoom;
+    int roomIndex;
     Room **roomArray;
 
-    void initRooms();
+    void init();
     void keyPressEvent(QKeyEvent * event);
     enum directions { UP = 1, DOWN, LEFT, RIGHT};
     bool canMove(directions d);
+
+    void addItem(Item *x);
+    void getItems();
+
 };
 
 #endif // MYPLAYER_H
