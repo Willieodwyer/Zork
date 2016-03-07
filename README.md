@@ -2,49 +2,27 @@
 
 # Will
 
+Item
+smooth movement
+Add a monster                       could be done towards the end
+add rrow keys
+add space bar to trigger an event
 
-Make Project into GUI app               [DONE]
-
-Get it to render                        [DONE]
-
-Add game class                          [DONE]
-
-Make a sketch of layout                 [CHANGED]
-
-Character Header                        [IN PROGRESS]
 
 #Niall
-Make main menu                          [DONE - MAY REQUIRE CHANGES/IMPROVEMENTS]
+Make main menu                          [change res]
 
-Make in game menu                       [IN PROGRESS]
-
-Make Scenario window                    [DONE]
+edit options menu
 
 Figure out transition between windows   []
 
-Figure out the logging thing            [N]
-
-Add items to rooms                      [N]
-
-Make buttons for commands               [N/A]
-
 #PENDING
 
-Come up with a story line               []
-
-Assets                                  []
-
-Animations                              []
-
-Add a monster                           []
+Come up with a story line - That can be done in the scenario window
 
 Make help window showing game controls  []
 
 #IDEAS FOR IMPROVEMENT
-
-Create character                        []
-
-Save game/progress                      []
 
 
 
