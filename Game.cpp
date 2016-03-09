@@ -30,12 +30,6 @@ void Game::play(){
     background->setScale(SCALE);
     background->setPixmap(QPixmap(":/assets/assets/Dungeon.jpg"));
 
-    QLabel *gif_anim = new QLabel();
-    QMovie *movie = new QMovie(":/assets/assets/undead_monster_animation.gif");
-    gif_anim->setMovie(movie);
-    movie->start();
-    QGraphicsProxyWidget *proxy = scene->addWidget(gif_anim);
-
     scene->addItem(background);
     scene->addItem(player);
 
