@@ -7,7 +7,8 @@ class Item {
 private:
     QString description;
 public:
-    Item (QString description);
+    Item(QString description);
+    ~Item();
     QString getDescription();
     void setDescription(QString x);
 };

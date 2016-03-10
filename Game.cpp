@@ -24,6 +24,14 @@ Game::Game()
 
     player = new Player();
 }
+Game::~Game()
+{
+    qDebug() << "Game exiting";
+    delete player;
+    delete background;
+    delete view;
+    delete scene;
+}
 
 void Game::play(){
 
