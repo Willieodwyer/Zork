@@ -6,15 +6,30 @@
 #include "gamemenu.h"
 #include "scenariobox.h"
 #include "Room.h"
+#include <vector>
+
+#define NUM_OF_ROOMS 45
+
+using namespace std;
 
 class Player: public QGraphicsPixmapItem{
 
 public:
     Player();
-    Room *hallway; // make this some sort of array of rooms
 
+    QVector <QString> items;
+    Room *currentRoom;
+    int roomIndex;
+    Room **roomArray;
+
+    void init();
     void keyPressEvent(QKeyEvent * event);
-    bool isInRoom();
+    enum directions { UP = 1, DOWN, LEFT, RIGHT};
+    bool canMove(directions d);
+
+    void addItem(Item *x);
+    void getItems();
+
 };
 
 #endif // MYPLAYER_H
