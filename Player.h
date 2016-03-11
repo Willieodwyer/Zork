@@ -16,11 +16,12 @@ class Player: public QGraphicsPixmapItem{
 
 public:
     Player();
+    ~Player();
 
     QVector <QString> items;
     Room *currentRoom;
     int roomIndex;
-    Room **roomArray;
+    Room *roomArray[NUM_OF_ROOMS];
 
     void init();
     void keyPressEvent(QKeyEvent * event);

@@ -20,6 +20,7 @@ private:
     Player * player;
 public:
     Game();
+    ~Game();
     void play();
     void close();
 };

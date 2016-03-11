@@ -24,6 +24,13 @@ Player::Player(){
     roomIndex = 0;
 }
 
+Player::~Player(){
+    qDebug() << "Deleting Player";
+    for( int i = 0 ; i < NUM_OF_ROOMS; i++){
+        delete roomArray[i];
+    }
+}
+
 void Player::keyPressEvent(QKeyEvent *event){
     switch (event->key()) {
     // UP DOWN LEFT RIGHT
@@ -121,7 +128,7 @@ bool Player::canMove(directions d){
 void Player::init(){
     //MASSIVE ARRAY OF DOOOOOOOOM (rooms)
     Item *temp = new Item("temp");
-    roomArray = new Room *[NUM_OF_ROOMS];
+//    roomArray = new Room *[NUM_OF_ROOMS];
     roomArray[0] = new Room("start",120, 510, 150, 630);
     roomArray[1] = new Room("mainBOT",60, 450, 210, 480);
     roomArray[2] = new Room("mainBotDiv",90, 420, 180, 420);

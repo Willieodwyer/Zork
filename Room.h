@@ -18,6 +18,7 @@ private:
 
 public:
     Room(QString description, int x1, int y1, int x2, int y2);
+    ~Room();
 
     QString longDescription();
     Item* getItem();
