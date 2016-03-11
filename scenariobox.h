@@ -15,8 +15,8 @@ public:
     explicit ScenarioBox(QWidget *parent = 0);
     ~ScenarioBox();
     void setScenario(QString title, QString desc, QString Opt1, QString Opt2);
-    //void showScenario();
-    bool optionSelected;
+    int showScenario();
+    bool optionSelected = 0;
     bool buttonClicked;
 
 private slots:

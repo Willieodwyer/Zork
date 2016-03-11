@@ -1,6 +1,7 @@
 #include "scenariobox.h"
 #include "ui_scenariobox.h"
 #include <QDebug>
+#include <QThread>
 
 ScenarioBox::ScenarioBox(QWidget *parent) :
     QDialog(parent),
@@ -21,20 +22,23 @@ void ScenarioBox::setScenario(QString title, QString desc, QString Opt1, QString
     ui->btnOptionB->setText(Opt2);
 }
 
-/*void ScenarioBox::showScenario()
+int ScenarioBox::showScenario()
 {
     buttonClicked = 0;
     this->show();
-    while (!buttonClicked){
-    }
-    //return optionSelected;
-}*/
+   /* while (!buttonClicked){
+    //if (!buttonClicked){
+        qDebug()<< "waiting";
+       // QThread::sleep(10);
+    }*/
+    return optionSelected;
+}
 
 void ScenarioBox::on_btnOptionA_clicked()
 {
     qDebug() << "button A clicked";
     optionSelected = 0;
-    //buttonClicked = 1;
+    buttonClicked = 1;
     close();
 }
 
@@ -42,6 +46,6 @@ void ScenarioBox::on_btnOptionB_clicked()
 {
     qDebug() << "button B clicked";
     optionSelected = 1;
-    //buttonClicked = 1;
+    buttonClicked = 1;
     close();
 }
