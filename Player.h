@@ -22,6 +22,7 @@ public:
     Room *currentRoom;
     int roomIndex;
     Room *roomArray[NUM_OF_ROOMS];
+    ScenarioBox sbox;
 
     void init();
     void keyPressEvent(QKeyEvent * event);

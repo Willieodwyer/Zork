@@ -1,7 +1,7 @@
 #include "scenariobox.h"
 #include "ui_scenariobox.h"
+#include "Item.h"
 #include <QDebug>
-#include <QThread>
 
 ScenarioBox::ScenarioBox(QWidget *parent) :
     QDialog(parent),
@@ -22,30 +22,45 @@ void ScenarioBox::setScenario(QString title, QString desc, QString Opt1, QString
     ui->btnOptionB->setText(Opt2);
 }
 
-int ScenarioBox::showScenario()
+void ScenarioBox::showScenario(Room *x)
 {
-    buttonClicked = 0;
+    currentRoom = x;
+    setScenario("Item Found!", "You have found : " + currentRoom->getItem()->getDescription() +".\nDo you wish to pick it up or leave it?", "Pick up", "Leave");
+    setObjective();
+    getItems();
     this->show();
-   /* while (!buttonClicked){
-    //if (!buttonClicked){
-        qDebug()<< "waiting";
-       // QThread::sleep(10);
-    }*/
-    return optionSelected;
+}
+
+void ScenarioBox::getItems()
+{
+    QString temp = "";
+    for (int i = 0; i < items.size(); ++i) {
+        temp.append(items[i]);
+        temp.append("\n");
+    }
+    qDebug() << temp;
+    ui->txtInventory->setText(temp);
+}
+
+void ScenarioBox::setObjective()
+{
+    ui->txtObjectives->setText("Appease the monster!!");
+    ui->txtObjectives->setTextBackgroundColor("blue");
 }
 
 void ScenarioBox::on_btnOptionA_clicked()
 {
-    qDebug() << "button A clicked";
-    optionSelected = 0;
-    buttonClicked = 1;
+    //qDebug() << "button A clicked";
+    Item *x = currentRoom->getItem();
+    if(QString::compare(x->getDescription(),"NONE") != 0){
+        items.push_back(x->getDescription());
+        currentRoom->removeItem();
+    }
     close();
 }
 
 void ScenarioBox::on_btnOptionB_clicked()
 {
-    qDebug() << "button B clicked";
-    optionSelected = 1;
-    buttonClicked = 1;
+    //qDebug() << "button B clicked";
     close();
 }

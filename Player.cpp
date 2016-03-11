@@ -61,8 +61,9 @@ void Player::keyPressEvent(QKeyEvent *event){
     case Qt::Key_Space:
         qDebug() << currentRoom->longDescription();
         qDebug() << currentRoom->getItem()->getDescription();
-        addItem(currentRoom->getItem());
-        currentRoom->removeItem();
+        sbox.showScenario(currentRoom);
+        //addItem(currentRoom->getItem());
+        //currentRoom->removeItem();
         break;
     case Qt::Key_I:
         getItems();

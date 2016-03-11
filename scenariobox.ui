@@ -30,7 +30,9 @@
 
 QLabel {color:maroon; background-color:black}
 
-QPushButton { color: maroon; background-color:black }</string>
+QPushButton { color: maroon; background-color:black }
+
+QDialog{ color:black}</string>
   </property>
   <widget class="QLabel" name="lblTitle">
    <property name="geometry">
@@ -112,7 +114,7 @@ QPushButton { color: maroon; background-color:black }</string>
     <rect>
      <x>220</x>
      <y>140</y>
-     <width>221</width>
+     <width>231</width>
      <height>121</height>
     </rect>
    </property>
@@ -124,33 +126,47 @@ QPushButton { color: maroon; background-color:black }</string>
     </font>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
+  <widget class="QLabel" name="lblInventory">
    <property name="geometry">
     <rect>
-     <x>540</x>
-     <y>70</y>
-     <width>47</width>
-     <height>13</height>
+     <x>520</x>
+     <y>60</y>
+     <width>141</width>
+     <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Showcard Gothic</family>
+     <pointsize>14</pointsize>
+     <italic>true</italic>
+    </font>
+   </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string>Inventory</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="lblObjectives">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>70</y>
-     <width>47</width>
-     <height>13</height>
+     <x>10</x>
+     <y>60</y>
+     <width>141</width>
+     <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Showcard Gothic</family>
+     <pointsize>14</pointsize>
+     <italic>true</italic>
+    </font>
+   </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string>Objectives</string>
    </property>
   </widget>
-  <widget class="QTextBrowser" name="txtDescription_3">
+  <widget class="QTextBrowser" name="txtObjectives">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -167,7 +183,7 @@ QPushButton { color: maroon; background-color:black }</string>
     </font>
    </property>
   </widget>
-  <widget class="QTextBrowser" name="txtDescription_4">
+  <widget class="QTextBrowser" name="txtInventory">
    <property name="geometry">
     <rect>
      <x>520</x>
