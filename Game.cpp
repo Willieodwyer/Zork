@@ -7,6 +7,10 @@
 #include <QGraphicsPixmapItem>
 #include <QPixmap>
 #include <QDebug>
+#include <QtGui>
+#include <QtCore>
+#include <QLabel>
+
 #define SCALE 0.5
 #define RES_X 960
 #define RES_Y 660
@@ -20,6 +24,14 @@ Game::Game()
 
     player = new Player();
 }
+Game::~Game()
+{
+    qDebug() << "Game exiting";
+    delete player;
+    delete background;
+    delete view;
+    delete scene;
+}
 
 void Game::play(){
 
@@ -31,7 +43,6 @@ void Game::play(){
 
     player->setFlag(QGraphicsItem::ItemIsFocusable);
     player->setFocus();
-
 
     view->setFixedSize(RES_X + 2,RES_Y + 2);
     scene->setSceneRect(0,0,RES_X,RES_Y);

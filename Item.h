@@ -1,11 +1,16 @@
-#ifndef ITEM_H
-#define ITEM_H
+#ifndef ITEM_H_
+#define ITEM_H_
 
+#include <QApplication>
 
-class Item
-{
+class Item {
+private:
+    QString description;
 public:
-    Item();
+    Item(QString description);
+    ~Item();
+    QString getDescription();
+    void setDescription(QString x);
 };
 
-#endif // ITEM_H
+#endif /*ITEM_H_*/

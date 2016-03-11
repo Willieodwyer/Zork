@@ -9,9 +9,6 @@
 #include <QGraphicsPixmapItem>
 #include <QPixmap>
 #include <QDebug>
-#define SCALE 0.5
-#define RES_X 960
-#define RES_Y 660
 
 
 class Game
@@ -23,6 +20,7 @@ private:
     Player * player;
 public:
     Game();
+    ~Game();
     void play();
     void close();
 };
