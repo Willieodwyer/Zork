@@ -93,7 +93,7 @@ QPushButton { color: maroon; background-color:black }</string>
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>200</y>
+      <y>250</y>
       <width>161</width>
       <height>51</height>
      </rect>
@@ -118,7 +118,7 @@ QPushButton { color: maroon; background-color:black }</string>
     <property name="geometry">
      <rect>
       <x>250</x>
-      <y>360</y>
+      <y>330</y>
       <width>161</width>
       <height>51</height>
      </rect>
@@ -131,25 +131,6 @@ QPushButton { color: maroon; background-color:black }</string>
     </property>
     <property name="text">
      <string>Quit</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btnHelp">
-    <property name="geometry">
-     <rect>
-      <x>250</x>
-      <y>280</y>
-      <width>161</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Showcard Gothic</family>
-      <pointsize>18</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Help</string>
     </property>
    </widget>
   </widget>

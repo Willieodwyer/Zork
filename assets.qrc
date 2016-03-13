@@ -9,5 +9,6 @@
         <file>assets/pattern1.jpg</file>
         <file>assets/pattern3.jpg</file>
         <file>assets/undead_monster_animation.gif</file>
+        <file>assets/monster_background.jpg</file>
     </qresource>
 </RCC>

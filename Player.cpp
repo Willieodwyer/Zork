@@ -4,8 +4,6 @@
 #include <QPixmap>
 #include <QGraphicsPixmapItem>
 #include <QPixmap>
-#include <QFuture>
-#include <QtConcurrent/QtConcurrent>
 #include <string>
 #define SCALE 0.05
 #define DISTANCE 30
@@ -67,6 +65,10 @@ void Player::keyPressEvent(QKeyEvent *event){
         break;
     case Qt::Key_I:
         getItems();
+        break;
+    case Qt::Key_F1:
+        showMenu();
+        break;
     default:
         break;
     }
@@ -191,6 +193,12 @@ void Player::getItems(){
         temp.append(" ");
     }
     qDebug() << temp;
+}
+
+void Player::showMenu()
+{
+    menu.setControls();
+    menu.show();
 }
 //////
 /////
