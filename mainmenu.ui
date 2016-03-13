@@ -45,16 +45,16 @@ QPushButton { color: maroon; background-color:black }</string>
    <widget class="QLabel" name="lblmain">
     <property name="geometry">
      <rect>
-      <x>250</x>
+      <x>190</x>
       <y>40</y>
-      <width>461</width>
+      <width>581</width>
       <height>141</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Showcard Gothic</family>
-      <pointsize>40</pointsize>
+      <pointsize>60</pointsize>
       <weight>75</weight>
       <italic>true</italic>
       <bold>true</bold>
@@ -101,7 +101,7 @@ QPushButton { color: maroon; background-color:black }</string>
     <property name="font">
      <font>
       <family>Showcard Gothic</family>
-      <pointsize>18</pointsize>
+      <pointsize>30</pointsize>
      </font>
     </property>
     <property name="autoFillBackground">
@@ -126,7 +126,7 @@ QPushButton { color: maroon; background-color:black }</string>
     <property name="font">
      <font>
       <family>Showcard Gothic</family>
-      <pointsize>18</pointsize>
+      <pointsize>30</pointsize>
      </font>
     </property>
     <property name="text">
