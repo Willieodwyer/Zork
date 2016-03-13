@@ -15,12 +15,12 @@ class Game
 {
 private:
     QGraphicsScene* scene;
-    QGraphicsView * view;
     QGraphicsPixmapItem* background;
     Player * player;
 public:
     Game();
     ~Game();
+    QGraphicsView * view;
     void play();
     void close();
 };
