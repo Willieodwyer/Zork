@@ -8,8 +8,6 @@ GameMenu::GameMenu(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::GameMenu)
 {
-    //ui->txtObjectives->setText("Insert list of objectives here\nPossibly stored in object?");
-    //ui->txtItems->setText("Insert list of obtained items here");
     ui->setupUi(this);
 }
 
@@ -18,25 +16,19 @@ GameMenu::~GameMenu()
     delete ui;
 }
 
+void GameMenu::setControls()
+{
+    ui->txtControls->setText("W/Up arrow:\tmove up\n\nS/Down arrow:\tmove down\n\nA/Left arrow:\tmove left\n\nD/Right arrow:\tmove right\n\nSpace:\t\tScenario menu");
+}
+
 void GameMenu::on_btnResume_clicked()
 {
     close();
 }
 
-void GameMenu::on_btnHelp_clicked()
-{
-    qDebug() << "help";
-}
-
-void GameMenu::on_btnHome_clicked()
-{
-    //MainMenu.game.close();
-    MainMenu menu;
-    menu.show();
-    close();
-}
-
 void GameMenu::on_btnQuit_clicked()
 {
+    //MainMenu menu;
+    //menu.game->close();
     close();
 }

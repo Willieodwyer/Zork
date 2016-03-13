@@ -47,6 +47,7 @@ void Game::play(){
     view->setFixedSize(RES_X + 2,RES_Y + 2);
     scene->setSceneRect(0,0,RES_X,RES_Y);
     view->show();
+    player->sbox.showScenario(player->currentRoom);
 }
 
 void Game::close(){

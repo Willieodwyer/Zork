@@ -14,13 +14,10 @@ class GameMenu : public QMainWindow
 public:
     explicit GameMenu(QWidget *parent = 0);
     ~GameMenu();
+    void setControls();
 
 private slots:
     void on_btnResume_clicked();
-
-    void on_btnHelp_clicked();
-
-    void on_btnHome_clicked();
 
     void on_btnQuit_clicked();
 
