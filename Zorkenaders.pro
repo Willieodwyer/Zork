@@ -38,3 +38,5 @@ FORMS    += \
 
 RESOURCES += \
     assets.qrc
+
+DISTFILES +=

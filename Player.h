@@ -22,6 +22,8 @@ public:
     Room *currentRoom;
     int roomIndex;
     Room *roomArray[NUM_OF_ROOMS];
+    ScenarioBox sbox;
+    GameMenu menu;
 
     void init();
     void keyPressEvent(QKeyEvent * event);
@@ -30,6 +32,8 @@ public:
 
     void addItem(Item *x);
     void getItems();
+
+    void showMenu();
 
 };
 
