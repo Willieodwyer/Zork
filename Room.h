@@ -9,11 +9,20 @@
 
 class Room {
 
+    friend QDebug operator<< (QDebug d, Room *model) {
+        d << model->longDescription();
+        return d;
+    }
+
+
+
 private:
     QString description;
     Item *item;
     int X1, Y1; // Coordinates of the top left corener
     int X2, Y2; // Coordinates of the bottom right corner
+
+
 
 
 public:
@@ -31,6 +40,7 @@ public:
     int getY1();
     int getX2();
     int getY2();
+
 
 };
 

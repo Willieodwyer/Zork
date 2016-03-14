@@ -57,7 +57,7 @@ void Player::keyPressEvent(QKeyEvent *event){
         }
         break;
     case Qt::Key_Space:
-        qDebug() << currentRoom->longDescription();
+        qDebug() << currentRoom;
         qDebug() << currentRoom->getItem()->getDescription();
         sbox.showScenario(currentRoom);
         //addItem(currentRoom->getItem());
