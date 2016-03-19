@@ -59,9 +59,7 @@ void Player::keyPressEvent(QKeyEvent *event){
     case Qt::Key_Space:
         qDebug() << currentRoom->longDescription();
         qDebug() << currentRoom->getItem()->getDescription();
-        sbox.showScenario(currentRoom);
-        //addItem(currentRoom->getItem());
-        //currentRoom->removeItem();
+        showScenarioBox();
         break;
     case Qt::Key_I:
         getItems();
@@ -197,8 +195,22 @@ void Player::getItems(){
 
 void Player::showMenu()
 {
+    setEnabled(false);
     menu.setControls();
     menu.show();
+    //menu.exec();
+    qDebug() << "menu test" << endl;
+    setEnabled(true);
+    setFocus();
+}
+
+void Player::showScenarioBox()
+{
+    setEnabled(false);
+    sbox.showScenario(currentRoom);
+    sbox.exec();
+    setEnabled(true);
+    setFocus();
 }
 //////
 /////

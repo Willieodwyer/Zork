@@ -31,7 +31,7 @@ void ScenarioBox::setScenario(QString title, QString desc, QString Opt1)
     ui->txtDescription->setText(desc);
     ui->btnOptionB->setText(Opt1);
     ui->btnOptionA->setVisible(false);
-    ui->btnOptionB->move(260, 350);
+    ui->btnOptionB->move(255, 380);
 }
 
 void ScenarioBox::showScenario(Room *x)
