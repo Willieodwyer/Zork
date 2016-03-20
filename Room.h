@@ -18,10 +18,12 @@ private:
 
 public:
     Room(QString description, int x1, int y1, int x2, int y2);
+    Room(QString description, int x1, int y1, int x2, int y2, bool scenario);
     ~Room();
 
     QString longDescription();
     Item* getItem();
+    bool hasScenario;
 
     int numberOfItems();
     void setItem(Item *inItem);
@@ -31,7 +33,7 @@ public:
     int getY1();
     int getX2();
     int getY2();
-
+    void scenarioDone();
 };
 
 #endif

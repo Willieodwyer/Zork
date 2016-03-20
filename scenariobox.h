@@ -18,8 +18,9 @@ public:
 
     Room *currentRoom;
     QVector <QString> items;
-    QVector <QString> objectives;
+    QString objectives[5];
     Item *x;
+    int numOfObjs;
 
     void setScenario(QString title, QString desc, QString Opt1, QString Opt2);
     void setScenario(QString title, QString desc, QString Opt1);
