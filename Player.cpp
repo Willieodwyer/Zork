@@ -20,6 +20,11 @@ Player::Player(){
     setPos(x()+(DISTANCE*4),y()+(DISTANCE*21));
     init();
     roomIndex = 0;
+    map = new Map();
+    qDebug() << map->operator [](20);
+//    for(int i = 0;i < NUM_OF_ROOMS; i ++){
+//        qDebug() << map->operator [](i);
+//    }
 }
 
 Player::~Player(){
@@ -204,4 +209,3 @@ void Player::showMenu()
 /////
 ////
 ///
-
