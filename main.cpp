@@ -11,7 +11,7 @@
 //of the project and should include concepts such as :
 
 //Classes DONE, Objects DONE, Destructors DONE, Pre-processor directives DONE, Function Prototypes DONE and Coercion ????, Pointers DONE, Inheritance PLAYER CLASS (including virtual methods) keyPressedEvent
-// Memory Management ALL THEM DELETES YO , Templates Dunno what we'd do with this, Operator overloading same
+// Memory Management ALL THEM DELETES YO , Templates Dunno what we'd do with this, Operator overloading DONE << and []
 
 //In your presentation you will be required to describe all aspects of your code as well as a number of event driven features that are part of your game code.
 
