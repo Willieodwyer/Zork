@@ -21,7 +21,7 @@ Player::Player(){
     init();
     roomIndex = 0;
     map = new Map();
-    qDebug() << map->operator [](20);
+    qDebug() << (*map)[0];
 //    for(int i = 0;i < NUM_OF_ROOMS; i ++){
 //        qDebug() << map->operator [](i);
 //    }
