@@ -10,6 +10,16 @@ Room::Room(QString description, int x1, int y1, int x2, int y2) {
     Y2 = y2;
     this->description = description;
     this->item = new Item("NONE");
+    this->hasScenario = false;
+}
+Room::Room(QString description, int x1, int y1, int x2, int y2, bool scenario) {
+    X1 = x1;
+    X2 = x2;
+    Y1 = y1;
+    Y2 = y2;
+    this->description = description;
+    this->item = new Item("NONE");
+    this->hasScenario = scenario;
 }
 Room::~Room(){
     qDebug() << "Deleting room :- " << description;
@@ -57,3 +67,13 @@ int Room::getX2(){
 int Room::getY2(){
     return Y2;
 }
+
+void Room::scenarioDone()
+{
+    //if (this->longDescription() != "before the BEAST"){
+        //if (this->getItem()->getDescription() == "NONE")
+            this->hasScenario = false;
+    //}
+}
+
+

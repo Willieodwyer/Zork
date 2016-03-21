@@ -28,7 +28,5 @@ void GameMenu::on_btnResume_clicked()
 
 void GameMenu::on_btnQuit_clicked()
 {
-    //MainMenu menu;
-    //menu.game->close();
-    close();
+    qApp->quit();
 }
