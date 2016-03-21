@@ -7,6 +7,7 @@
 #include "scenariobox.h"
 #include "Room.h"
 #include <vector>
+#include "Map.h"
 
 #define NUM_OF_ROOMS 45
 
@@ -17,6 +18,7 @@ class Player: public QGraphicsPixmapItem{
 public:
     Player();
     ~Player();
+    Map *map;
 
     QVector <QString> items;
     Room *currentRoom;

@@ -20,6 +20,11 @@ Player::Player(){
     setPos(x()+(DISTANCE*4),y()+(DISTANCE*21));
     init();
     roomIndex = 0;
+    map = new Map();
+    qDebug() << (*map)[0];
+//    for(int i = 0;i < NUM_OF_ROOMS; i ++){
+//        qDebug() << map->operator [](i);
+//    }
 }
 
 Player::~Player(){
@@ -57,7 +62,7 @@ void Player::keyPressEvent(QKeyEvent *event){
         }
         break;
     case Qt::Key_Space:
-        qDebug() << currentRoom->longDescription();
+        qDebug() << currentRoom;
         qDebug() << currentRoom->getItem()->getDescription();
         showScenarioBox();
         break;
@@ -242,4 +247,3 @@ void Player::showScenarioBox()
 /////
 ////
 ///
-

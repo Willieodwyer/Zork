@@ -19,7 +19,8 @@ SOURCES += main.cpp \
     mainmenu.cpp \
     scenariobox.cpp \
     gamemenu.cpp \
-    Player.cpp
+    Player.cpp \
+    Map.cpp
 
 HEADERS  += \
     player.h \
@@ -29,7 +30,8 @@ HEADERS  += \
     mainmenu.h \
     scenariobox.h \
     gamemenu.h \
-    Player.h
+    Player.h \
+    Map.h
 
 FORMS    += \
     mainmenu.ui \
