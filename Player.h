@@ -34,6 +34,7 @@ public:
     void getItems();
 
     void showMenu();
+    void showScenarioBox();
 
 };
 

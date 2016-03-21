@@ -20,13 +20,10 @@ void MainMenu::on_btnNew_clicked()
 {
     setCentralWidget(game.view);
     game.play();
-    //qDebug() << "here";
-    //game.close();
-    //close();
 }
 
 void MainMenu::on_btnQuit_clicked()
 {
-    //qDebug() << "quit";
     close();
+    qApp->quit();
 }
