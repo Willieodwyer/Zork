@@ -20,10 +20,7 @@ public:
 
 
     Map();
-
-    Room* operator[] (int index) const{
-        return roomArray[index];
-    }
+    ~Map();
 
     Room* &operator[](int index){
         return this->roomArray[index];

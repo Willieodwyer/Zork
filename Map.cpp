@@ -56,3 +56,9 @@ Map::Map()
   currentRoom = roomArray[0];
 }
 
+Map::~Map(){
+    for( int i = 0 ; i < NUM_OF_ROOMS; i++){
+        delete roomArray[i];
+    }
+}
+
