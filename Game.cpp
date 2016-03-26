@@ -10,8 +10,8 @@
 #include <QtGui>
 #include <QtCore>
 #include <QLabel>
+#include <QThread>
 
-#define SCALE 0.5
 #define RES_X 960
 #define RES_Y 660
 
@@ -23,6 +23,8 @@ Game::Game()
     background = new QGraphicsPixmapItem();
 
     player = new Player();
+    monster = new Monster();
+    MonsterTimer *mTimer = new MonsterTimer(player, monster);
 }
 Game::~Game()
 {
@@ -31,15 +33,18 @@ Game::~Game()
     delete background;
     delete view;
     delete scene;
+    delete monster;
 }
 
 void Game::play(){
 
-    background->setScale(SCALE);
+    background->setScale(0.5);
     background->setPixmap(QPixmap(":/assets/assets/Dungeon.jpg"));
 
     scene->addItem(background);
     scene->addItem(player);
+    monster->setPixmap(QPixmap(":/assets/assets/pacman-ghost-128.png"));
+    scene->addItem(monster);
 
     player->setFlag(QGraphicsItem::ItemIsFocusable);
     player->setFocus();

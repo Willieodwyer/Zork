@@ -8,6 +8,8 @@
 #include "Room.h"
 #include <vector>
 #include "Map.h"
+#include <unistd.h>
+
 
 #define NUM_OF_ROOMS 45
 
@@ -27,7 +29,12 @@ public:
     ScenarioBox sbox;
     GameMenu menu;
 
-    void init();
+    void moveUp();
+    void moveDown();
+    void moveLeft();
+    void moveRight();
+
+    virtual void init();
     void keyPressEvent(QKeyEvent * event);
     enum directions { UP = 1, DOWN, LEFT, RIGHT};
     bool canMove(directions d);
@@ -35,9 +42,8 @@ public:
     void addItem(Item *x);
     void getItems();
 
-    void showMenu();
-    void showScenarioBox();
-
+    virtual void showMenu();
+    virtual void showScenarioBox();
 };
 
 #endif // MYPLAYER_H

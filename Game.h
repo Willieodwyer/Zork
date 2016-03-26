@@ -3,20 +3,25 @@
 
 
 #include "Player.h"
+#include "Monster.h"
 #include <QGraphicsScene>
 #include <QGraphicsView>
 #include <QtGlobal>
 #include <QGraphicsPixmapItem>
 #include <QPixmap>
 #include <QDebug>
+#include "Monstertimer.h"
+
 
 
 class Game
 {
 private:
+
     QGraphicsScene* scene;
     QGraphicsPixmapItem* background;
     Player * player;
+    Monster *monster;
 public:
     Game();
     ~Game();

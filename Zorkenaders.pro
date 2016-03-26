@@ -20,7 +20,9 @@ SOURCES += main.cpp \
     scenariobox.cpp \
     gamemenu.cpp \
     Player.cpp \
-    Map.cpp
+    Map.cpp \
+    Monster.cpp \
+    Monstertimer.cpp
 
 HEADERS  += \
     player.h \
@@ -31,7 +33,9 @@ HEADERS  += \
     scenariobox.h \
     gamemenu.h \
     Player.h \
-    Map.h
+    Map.h \
+    Monster.h \
+    Monstertimer.h
 
 FORMS    += \
     mainmenu.ui \
