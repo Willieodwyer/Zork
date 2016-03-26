@@ -5,6 +5,7 @@
 #include <QGraphicsPixmapItem>
 #include <QPixmap>
 #include <string>
+#include "Monster.h"
 #define SCALE 0.05
 #define DISTANCE 30
 
@@ -40,7 +41,7 @@ void Player::keyPressEvent(QKeyEvent *event){
     case Qt::Key_W: case Qt::Key_Up:
         if(canMove(UP)){
             setPixmap(QPixmap(":/assets/assets/pacman-ghost-128-UP.png"));
-            setPos(x(),y()-DISTANCE);
+            setPos(x(),y()-DISTANCE);;
         }
         break;
     case Qt::Key_S: case Qt::Key_Down:
@@ -243,6 +244,21 @@ void Player::showScenarioBox()
     setEnabled(true);
     setFocus();
 }
+
+void Player::moveUp(){
+        usleep(100000);
+        setPos(x(),y()-(10));
+}
+void Player::moveDown(){
+
+}
+void Player::moveLeft(){
+
+}
+void Player::moveRight(){
+
+}
+
 //////
 /////
 ////

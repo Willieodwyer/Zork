@@ -1,7 +1,6 @@
 #include <QApplication>
 #include "mainmenu.h"
 
-#define SCALE 0.5
 #define RES_X 960
 #define RES_Y 660
 
