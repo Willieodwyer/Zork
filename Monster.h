@@ -11,12 +11,13 @@ public:
     Monster();
     ~Monster();
     int wrongMove;
+    ScenarioBox sbox;
     QString chasePlayerUPDOWN(Player *p);
     QString chasePlayerLEFTRIGHT(Player *p);
+    void checkCaught(Player *p);
 
 
-    virtual void showMenu();
-    virtual void showScenarioBox();
+    virtual void showScenarioBox2();
 };
 
 #endif // MONSTER_H

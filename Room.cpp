@@ -70,10 +70,7 @@ int Room::getY2(){
 
 void Room::scenarioDone()
 {
-    //if (this->longDescription() != "before the BEAST"){
-        //if (this->getItem()->getDescription() == "NONE")
-            this->hasScenario = false;
-    //}
+    this->hasScenario = false;
 }
 
 
