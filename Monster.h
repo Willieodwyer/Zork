@@ -9,7 +9,6 @@ class Monster : public Player
 {
 public:
     Monster();
-    ~Monster();
     int wrongMove;
     QString chasePlayerUPDOWN(Player *p);
     QString chasePlayerLEFTRIGHT(Player *p);
