@@ -37,7 +37,7 @@ QString Monster::chasePlayerLEFTRIGHT(Player *p){
                 return "RIGHT";
             }
             else {
-                setPixmap(QPixmap(""));
+                setPixmap(QPixmap("://assets/smoke_cloud-a.png"));
                 setPos(x()+DISTANCE,y());
                 return "RIGHT";
             }
@@ -53,7 +53,7 @@ QString Monster::chasePlayerLEFTRIGHT(Player *p){
                 return "LEFT";
             }
             else {
-                setPixmap(QPixmap(""));
+                setPixmap(QPixmap("://assets/smoke_cloud-a.png"));
                 setPos(x()-DISTANCE,y());
                 return "LEFT";
             }
@@ -80,7 +80,7 @@ QString Monster::chasePlayerUPDOWN(Player *p){
                 return "UP";
             }
             else{
-                this->setPixmap(QPixmap(""));
+                this->setPixmap(QPixmap("://assets/smoke_cloud-a.png"));
                 setPos(x(),y()-DISTANCE);
             }
             return "UP";
@@ -93,7 +93,7 @@ QString Monster::chasePlayerUPDOWN(Player *p){
                 return "DOWN";
             }
             else{
-                setPixmap(QPixmap(""));
+                setPixmap(QPixmap("://assets/smoke_cloud-a.png"));
                 setPos(x(),y()+DISTANCE);
                 return "DOWN";
             }
