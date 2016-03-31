@@ -25,6 +25,7 @@ Player::Player(){
 //    for(int i = 0;i < NUM_OF_ROOMS; i ++){
 //        qDebug() << (*map)[i];
 //    }
+    a = true;
 }
 
 Player::~Player(){
@@ -150,7 +151,7 @@ bool Player::canMove(directions d){
 
 void Player::init(){
     //MASSIVE ARRAY OF DOOOOOOOOM (rooms)
-    Item *temp = new Item("temp");
+    //Item *temp = new Item("temp");
     Item *apple = new Item("apple");
     Item *orange = new Item("orange");
     Item *grape = new Item("grape");
@@ -170,10 +171,10 @@ void Player::init(){
     roomArray[9] = new Room("midCorridor",270, 300, 450,330);
     roomArray[10]= new Room("littleCub",390,360,390,390);
     roomArray[11]= new Room("waterRoom",300,390,360,420);
-    roomArray[12]= new Room("beastView",300,450,300,450);
+    roomArray[12]= new Room("beastView",300,450,300,450, true);
+    roomArray[12]->setItem(banana);
     roomArray[13]= new Room("watersEdge",270,480,450,480);
-    roomArray[14]= new Room("longCorridor",480,180,480,540, true);
-    roomArray[14]->setItem(grape);
+    roomArray[14]= new Room("longCorridor",480,180,480,540);
     roomArray[15]= new Room("barrel",540,600,540,600);
     roomArray[16]= new Room("lightWay",570,600,690,600);
     roomArray[17]= new Room("benchLeft",690,540,690,570);
@@ -184,8 +185,8 @@ void Player::init(){
     roomArray[21]= new Room("EntraceToDarkRoom",720,540,750,540);
     roomArray[22]= new Room("darkRoomTop",750,570,810,570);
     roomArray[23]= new Room("darkRoomBot",810,600,840,600);
-    roomArray[24]= new Room("darkBarrel",870,600,870,600);
-    roomArray[24]->setItem(temp);
+    roomArray[24]= new Room("darkBarrel",870,600,870,600, true);
+    roomArray[24]->setItem(grape);
     roomArray[25]= new Room("barrelCub",510,540,540,540);
     roomArray[26]= new Room("besideBarrel",540,570,540,570);
     roomArray[27]= new Room("eyesOfTheMonster",300,450,300,450);
@@ -199,8 +200,7 @@ void Player::init(){
     roomArray[34]= new Room("tableRoom",480,60,540,150);
     roomArray[35]= new Room("lessUpperCorridor",570,120,750,120);
     roomArray[36]= new Room("pointingDownLessUpperCorridor",750,150,750,180);
-    roomArray[37]= new Room("STARING AT THE BEAST",510,300,570,330, true);
-    roomArray[37]->setItem(banana);
+    roomArray[37]= new Room("STARING AT THE BEAST",510,300,570,330);
     roomArray[38]= new Room("eyesOfTheMonster",600,210,630,420);
     roomArray[39]= new Room("middlePit",690,210,750,420);
     roomArray[40]= new Room("botRow",630,420,840,420);
@@ -227,22 +227,26 @@ void Player::getItems(){
 
 void Player::showMenu()
 {
+    a = false;
     setEnabled(false);
     menu.setControls();
     menu.show();
-    //menu.exec();
+    menu.exec();
     qDebug() << "menu test" << endl;
     setEnabled(true);
     setFocus();
+    a = true;
 }
 
 void Player::showScenarioBox()
 {
+    a = false;
     setEnabled(false);
     sbox.showScenario(currentRoom);
     sbox.exec();
     setEnabled(true);
     setFocus();
+    a = true;
 }
 
 void Player::moveUp(){

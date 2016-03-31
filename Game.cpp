@@ -24,7 +24,7 @@ Game::Game()
 
     player = new Player();
     monster = new Monster();
-    MonsterTimer *mTimer = new MonsterTimer(player, monster);
+    //MonsterTimer *mTimer = new MonsterTimer(player, monster);
 }
 Game::~Game()
 {
@@ -33,7 +33,7 @@ Game::~Game()
     delete background;
     delete view;
     delete scene;
-    delete monster;
+    //delete monster;
 }
 
 void Game::play(){
@@ -44,7 +44,6 @@ void Game::play(){
     scene->addItem(background);
     scene->addItem(player);
     monster->setPixmap(QPixmap(":/assets/assets/pacman-ghost-128.png"));
-    scene->addItem(monster);
 
     player->setFlag(QGraphicsItem::ItemIsFocusable);
     player->setFocus();
@@ -53,6 +52,8 @@ void Game::play(){
     scene->setSceneRect(0,0,RES_X,RES_Y);
     view->show();
     player->showScenarioBox();
+    scene->addItem(monster);
+    MonsterTimer *mTimer = new MonsterTimer(player, monster);
 }
 
 void Game::close(){

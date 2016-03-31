@@ -25,6 +25,9 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="toolTip">
+   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+  </property>
   <property name="whatsThis">
    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This is the Scenario Window. It show information about your current scenario, including objectives and inventory. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
   </property>
@@ -118,7 +121,7 @@ QDialog{ color:black}</string>
      <x>220</x>
      <y>130</y>
      <width>231</width>
-     <height>151</height>
+     <height>171</height>
     </rect>
    </property>
    <property name="font">
@@ -201,6 +204,25 @@ QDialog{ color:black}</string>
      <pointsize>10</pointsize>
      <italic>true</italic>
     </font>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnOptionC">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>320</y>
+     <width>151</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Showcard Gothic</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Option3</string>
    </property>
   </widget>
  </widget>

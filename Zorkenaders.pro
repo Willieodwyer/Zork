@@ -18,11 +18,11 @@ SOURCES += main.cpp \
     Room.cpp \
     mainmenu.cpp \
     scenariobox.cpp \
-    gamemenu.cpp \
     Player.cpp \
     Map.cpp \
     Monster.cpp \
-    Monstertimer.cpp
+    Monstertimer.cpp \
+    controlswindow.cpp
 
 HEADERS  += \
     player.h \
@@ -31,16 +31,16 @@ HEADERS  += \
     Room.h \
     mainmenu.h \
     scenariobox.h \
-    gamemenu.h \
     Player.h \
     Map.h \
     Monster.h \
-    Monstertimer.h
+    Monstertimer.h \
+    controlswindow.h
 
 FORMS    += \
     mainmenu.ui \
     scenariobox.ui \
-    gamemenu.ui
+    controlswindow.ui
 
 RESOURCES += \
     assets.qrc
