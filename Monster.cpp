@@ -20,16 +20,14 @@ QString Monster::chasePlayerLEFTRIGHT(Player *p){
         checkCaught(p);
         if(this->x() < p->x()){
 
-    if(this->x() < p->x()){
-
-        if(canMove(RIGHT)){
-            setPixmap(QPixmap(":/assets/inverted.png"));
-            setPos(x()+DISTANCE,y());
-            return "RIGHT";
-        }
-        else {
-            setPixmap(QPixmap("://assets/smoke_cloud-a.png"));
-            setPos(x()+DISTANCE,y());
+            if(canMove(RIGHT)){
+                setPixmap(QPixmap(":/assets/inverted.png"));
+                setPos(x()+DISTANCE,y());
+                return "RIGHT";
+            }
+            else {
+                setPixmap(QPixmap("://assets/smoke_cloud-a.png"));
+                setPos(x()+DISTANCE,y());
             }
             return "RIGHT";
         }
@@ -37,29 +35,30 @@ QString Monster::chasePlayerLEFTRIGHT(Player *p){
         if(this->x() > p->x()){
 
 
-        if(canMove(LEFT)){
-            setPixmap(QPixmap(":/assets/invertedflipped.png"));
-            setPos(x()-DISTANCE,y());
-            return "LEFT";
-        }
-        else {
-            setPixmap(QPixmap("://assets/smoke_cloud-a.png"));
-            setPos(x()-DISTANCE,y());
-            return "LEFT";
+            if(canMove(LEFT)){
+                setPixmap(QPixmap(":/assets/invertedflipped.png"));
+                setPos(x()-DISTANCE,y());
+                return "LEFT";
+            }
+            else {
+                setPixmap(QPixmap("://assets/smoke_cloud-a.png"));
+                setPos(x()-DISTANCE,y());
+                return "LEFT";
             }
         }
     }
     return "";
 }
 
+
 void Monster::checkCaught(Player *p)
 {
-    if(this->x() == p->x())
-        if(this->y() == p->y()){
-            //qDebug() << "MX1: " +  QString::number(x()) + " MY1: " + QString::number(y()) << "X1: " +  QString::number(p->x()) + " Y1: " + QString::number(p->y());
-            showScenarioBox2();
-        }
+    if(this->y() == p->y() && this->x() == p->x()){
+        //qDebug() << "MX1: " +  QString::number(x()) + " MY1: " + QString::number(y()) << "X1: " +  QString::number(p->x()) + " Y1: " + QString::number(p->y());
+        showScenarioBox2();
+    }
 }
+
 QString Monster::chasePlayerUPDOWN(Player *p){
     if (p->a){
         checkCaught(p);
@@ -70,33 +69,28 @@ QString Monster::chasePlayerUPDOWN(Player *p){
                 return "UP";
             }
             else{
-                this->setPixmap(QPixmap(""));
+                this->setPixmap(QPixmap("://assets/smoke_cloud-a.png"));
                 setPos(x(),y()-DISTANCE);
             }
             return "UP";
         }
-        else{
-            this->setPixmap(QPixmap("://assets/smoke_cloud-a.png"));
-            setPos(x(),y()-DISTANCE);
-        }
-        return "UP";
-    }
-    if(this->y() < p->y()){
+        if(this->y() < p->y()){
 
-        if(canMove(DOWN)){
-            setPixmap(QPixmap(":/assets/invertedDOWN.png"));
-            setPos(x(),y()+DISTANCE);
-            return "DOWN";
-        }
-        else{
-            setPixmap(QPixmap("://assets/smoke_cloud-a.png"));
-            setPos(x(),y()+DISTANCE);
-            return "DOWN";
+            if(canMove(DOWN)){
+                setPixmap(QPixmap(":/assets/invertedDOWN.png"));
+                setPos(x(),y()+DISTANCE);
+                return "DOWN";
+            }
+            else{
+                setPixmap(QPixmap("://assets/smoke_cloud-a.png"));
+                setPos(x(),y()+DISTANCE);
+                return "DOWN";
             }
         }
+        return "DD";
     }
-    return "Chasing";
 }
+
 
 void Monster::showScenarioBox2()
 {
