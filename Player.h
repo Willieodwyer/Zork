@@ -3,7 +3,7 @@
 
 #include <QGraphicsPixmapItem>
 #include <QSet>
-#include "gamemenu.h"
+#include "controlswindow.h"
 #include "scenariobox.h"
 #include "Room.h"
 #include <vector>
@@ -27,7 +27,9 @@ public:
     int roomIndex;
     Room *roomArray[NUM_OF_ROOMS];
     ScenarioBox sbox;
-    GameMenu menu;
+    ControlsWindow menu;
+
+    bool a;
 
     void moveUp();
     void moveDown();

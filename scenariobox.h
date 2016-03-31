@@ -24,6 +24,7 @@ public:
 
     void setScenario(QString title, QString desc, QString Opt1, QString Opt2);
     void setScenario(QString title, QString desc, QString Opt1);
+    void endGame(QString title, QString desc, QString Opt1);
     void showScenario(Room *x);
     void getItems();
     void setObjective();
@@ -42,6 +43,8 @@ private slots:
     void on_btnOptionA_clicked();
 
     void on_btnOptionB_clicked();
+
+    void on_btnOptionC_clicked();
 
 private:
     Ui::ScenarioBox *ui;

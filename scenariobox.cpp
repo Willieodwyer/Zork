@@ -23,7 +23,12 @@ void ScenarioBox::setScenario(QString title, QString desc, QString Opt1, QString
     ui->btnOptionA->setText(Opt1);
     ui->btnOptionB->setText(Opt2);
     ui->btnOptionA->setVisible(true);
+    ui->btnOptionB->setVisible(true);
+    ui->btnOptionC->setVisible(false);
     ui->btnOptionB->move(380, 380);
+    setObjective();
+    getItems();
+    this->show();
 }
 
 void ScenarioBox::setScenario(QString title, QString desc, QString Opt1)
@@ -32,17 +37,36 @@ void ScenarioBox::setScenario(QString title, QString desc, QString Opt1)
     ui->txtDescription->setText(desc);
     ui->btnOptionB->setText(Opt1);
     ui->btnOptionA->setVisible(false);
+    ui->btnOptionC->setVisible(false);
+    ui->btnOptionB->setVisible(true);
     ui->btnOptionB->move(255, 380);
+    setObjective();
+    getItems();
+    this->show();
+}
+
+void ScenarioBox::endGame(QString title, QString desc, QString Opt1)
+{
+    ui->lblTitle->setText(title);
+    ui->txtDescription->setText(desc);
+    ui->btnOptionC->setText(Opt1);
+    ui->btnOptionA->setVisible(false);
+    ui->btnOptionB->setVisible(false);
+    ui->btnOptionC->setVisible(true);
+    ui->btnOptionC->move(255, 380);
+    setObjective();
+    getItems();
+    this->show();
 }
 
 void ScenarioBox::showScenario(Room *x)
 {
     currentRoom = x;
     if (currentRoom->longDescription() == "start")
-        setScenario("Start", "Welcome to Zorknaders!\n To complete the game, you must collect all the items and bring them to the monster!", "Ok");
+        setScenario("Start", "Welcome to Zorknaders!\n To complete the game, you must collect all the items and bring them to the monster! Be careful, if you are caught by the monster's guard you will lose the game!!\nControls: F1", "Ok");
     else if (currentRoom->longDescription() == "before the BEAST"){
         if (checkItems()){
-            setScenario("CHAMPION", "Congratulations!!\nYou've won the game", "Ok");
+            endGame("CHAMPION", "Congratulations!!\nYou've appeased the monster and won the game", "Ok");
         }
         else
             setScenario("Monster", "You must appease the Monster by collecting all of the objectives", "Ok");
@@ -51,9 +75,6 @@ void ScenarioBox::showScenario(Room *x)
         setScenario("Item Found!", "You have found: " + currentRoom->getItem()->getDescription() +".\nDo you wish to pick it up or leave it?", "Pick up", "Leave");
     else
         setScenario("Zorknaders", "No items found!", "Ok");
-    setObjective();
-    getItems();
-    this->show();
 }
 
 void ScenarioBox::getItems()
@@ -112,4 +133,11 @@ void ScenarioBox::on_btnOptionB_clicked()
 {
     //qDebug() << "button B clicked";
     close();
+}
+
+void ScenarioBox::on_btnOptionC_clicked()
+{
+    //qDebug() << "button B clicked";
+    close();
+    qApp->quit();
 }
