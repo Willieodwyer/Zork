@@ -28,12 +28,12 @@ Monster::~Monster(){
 //    setPos(x()+DISTANCE,y());
 QString Monster::chasePlayerLEFTRIGHT(Player *p){
     if (p->a){
-        checkCaught(p);
         if(this->x() < p->x()){
 
             if(canMove(RIGHT)){
                 setPixmap(QPixmap(":/assets/inverted.png"));
                 setPos(x()+DISTANCE,y());
+                checkCaught(p);
                 return "RIGHT";
             }
             else {
@@ -50,6 +50,7 @@ QString Monster::chasePlayerLEFTRIGHT(Player *p){
             if(canMove(LEFT)){
                 setPixmap(QPixmap(":/assets/invertedflipped.png"));
                 setPos(x()-DISTANCE,y());
+                checkCaught(p);
                 return "LEFT";
             }
             else {
@@ -77,6 +78,7 @@ QString Monster::chasePlayerUPDOWN(Player *p){
             if(canMove(UP)){
                 setPos(x(),y()-DISTANCE);
                 setPixmap(QPixmap(":/assets/invertedUP.png"));
+                checkCaught(p);
                 return "UP";
             }
             else{
@@ -90,6 +92,7 @@ QString Monster::chasePlayerUPDOWN(Player *p){
             if(canMove(DOWN)){
                 setPixmap(QPixmap(":/assets/invertedDOWN.png"));
                 setPos(x(),y()+DISTANCE);
+                checkCaught(p);
                 return "DOWN";
             }
             else{

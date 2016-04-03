@@ -10,6 +10,7 @@
         <file>assets/pattern3.jpg</file>
         <file>assets/undead_monster_animation.gif</file>
         <file>assets/monster_background.jpg</file>
+        <file>assets/05 Come and Find Me.mp3</file>
     </qresource>
     <qresource prefix="/">
         <file>assets/invertedUP.png</file>

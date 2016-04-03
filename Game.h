@@ -11,13 +11,16 @@
 #include <QPixmap>
 #include <QDebug>
 #include "Monstertimer.h"
+#include <QMediaPlayer>
+#include <QSound>
+
 
 
 
 class Game
 {
 private:
-
+    QMediaPlayer * music;
     QGraphicsScene* scene;
     QGraphicsPixmapItem* background;
     Player * player;
