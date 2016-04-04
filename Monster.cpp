@@ -68,7 +68,7 @@ void Monster::checkCaught(Player *p)
     if(this->x() == p->x())
         if(this->y() == p->y()){
             //qDebug() << "MX1: " +  QString::number(x()) + " MY1: " + QString::number(y()) << "X1: " +  QString::number(p->x()) + " Y1: " + QString::number(p->y());
-            showScenarioBox2();
+            showScenarioBox();
         }
 }
 QString Monster::chasePlayerUPDOWN(Player *p){
@@ -105,7 +105,7 @@ QString Monster::chasePlayerUPDOWN(Player *p){
     return "Chasing";
 }
 
-void Monster::showScenarioBox2()
+void Monster::showScenarioBox()
 {
     setEnabled(false);
     sbox.endGame("GAME OVER", "You've been caught by the monster's guard!!!", "Ok");

@@ -17,7 +17,7 @@ public:
     void checkCaught(Player *p);
 
 
-    virtual void showScenarioBox2();
+    virtual void showScenarioBox();
 };
 
 #endif // MONSTER_H
