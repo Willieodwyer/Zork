@@ -1,6 +1,6 @@
 #include "Monstertimer.h"
 
-MonsterTimer::MonsterTimer(Player *x, Monster *y)
+MonsterTimer::MonsterTimer(Player *x, Player *y)
 {
     times = 0;
     p = x;
@@ -11,7 +11,7 @@ MonsterTimer::MonsterTimer(Player *x, Monster *y)
 }
 
 void MonsterTimer::MySlot(){
-    if(times < 61){
+    if(times < 41){
         times++;
         if (times % 2 == 0)
             m->setPixmap(QPixmap(":/assets/inverted.png"));

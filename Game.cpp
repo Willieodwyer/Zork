@@ -37,6 +37,7 @@ Game::~Game()
 {
     qDebug() << "Game exiting";
     delete player;
+    delete monster;
     delete background;
     delete view;
     delete scene;

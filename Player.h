@@ -46,6 +46,10 @@ public:
 
     virtual void showMenu();
     virtual void showScenarioBox();
+
+    virtual QString chasePlayerLEFTRIGHT(Player *p){(void) p; return "";};
+    virtual void checkCaught(Player *p){ (void) p; return;};
+    virtual QString chasePlayerUPDOWN(Player *p){ (void) p; return "";};
 };
 
 #endif // MYPLAYER_H

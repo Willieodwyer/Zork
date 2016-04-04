@@ -24,7 +24,7 @@ private:
     QGraphicsScene* scene;
     QGraphicsPixmapItem* background;
     Player * player;
-    Monster *monster;
+    Player *monster;
 public:
     Game();
     ~Game();
