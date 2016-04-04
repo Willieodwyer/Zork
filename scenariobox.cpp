@@ -74,7 +74,7 @@ void ScenarioBox::showScenario(Room *x)
     else if (isItem())
         setScenario("Item Found!", "You have found: " + currentRoom->getItem()->getDescription() +".\nDo you wish to pick it up or leave it?", "Pick up", "Leave");
     else
-        setScenario("Zorknaders", "No items found!", "Ok");
+        setScenario("Zorkenaders", "No items found!", "Ok");
 }
 
 void ScenarioBox::getItems()
