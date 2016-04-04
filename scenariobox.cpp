@@ -63,7 +63,7 @@ void ScenarioBox::showScenario(Room *x)
 {
     currentRoom = x;
     if (currentRoom->longDescription() == "start")
-        setScenario("Start", "Welcome to Zorknaders!\n To complete the game, you must collect all the items and bring them to the monster! Be careful, if you are caught by the monster's guard you will lose the game!!\nControls: F1", "Ok");
+        setScenario("Start", "Welcome to Zorkenaders!\n To complete the game, you must collect all the items and bring them to the monster! Be careful, if you are caught by the monster's guard you will lose the game!!\nControls: F1", "Ok");
     else if (currentRoom->longDescription() == "before the BEAST"){
         if (checkItems()){
             endGame("CHAMPION", "Congratulations!!\nYou've appeased the monster and won the game", "Ok");

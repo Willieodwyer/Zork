@@ -45,9 +45,9 @@ QPushButton { color: maroon; background-color:black }</string>
    <widget class="QLabel" name="lblmain">
     <property name="geometry">
      <rect>
-      <x>190</x>
+      <x>170</x>
       <y>40</y>
-      <width>581</width>
+      <width>621</width>
       <height>141</height>
      </rect>
     </property>
@@ -77,7 +77,7 @@ QPushButton { color: maroon; background-color:black }</string>
      <number>0</number>
     </property>
     <property name="text">
-     <string>Zorknaders</string>
+     <string>Zorkenaders</string>
     </property>
     <property name="scaledContents">
      <bool>false</bool>
