@@ -12,11 +12,18 @@
 #include <QLabel>
 #include <QThread>
 
+
 #define RES_X 960
 #define RES_Y 660
 
 Game::Game()
 {
+    //QSound::play(":/assets/assets/05 Come and Find Me.mp3");
+    music = new QMediaPlayer();
+    music->setMedia(QUrl("qrc:/assets/assets/05 Come and Find Me.mp3"));
+    music->play();
+
+    //:/assets/assets/05 Come and Find Me.mp3
     scene = new QGraphicsScene;
     view = new QGraphicsView(scene);
 
@@ -33,6 +40,7 @@ Game::~Game()
     delete background;
     delete view;
     delete scene;
+    delete music;
     //delete monster;
 }
 

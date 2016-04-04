@@ -2,7 +2,7 @@
 #define MONSTERTIMER_H
 #include <QtCore>
 #include "Monster.h"
-#define TICK_TIME 100
+#define TICK_TIME 150
 
 class MonsterTimer : public QObject
 {
