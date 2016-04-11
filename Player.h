@@ -19,7 +19,7 @@ class Player: public QGraphicsPixmapItem{
 
 public:
     Player();
-    ~Player();
+    virtual ~Player();
     Map *map;
 
     QVector <QString> items;
@@ -47,9 +47,17 @@ public:
     virtual void showMenu();
     virtual void showScenarioBox();
 
-    virtual QString chasePlayerLEFTRIGHT(Player *p){(void) p; return "";};
-    virtual void checkCaught(Player *p){ (void) p; return;};
-    virtual QString chasePlayerUPDOWN(Player *p){ (void) p; return "";};
+    virtual QString chasePlayerLEFTRIGHT(Player *p){(void) p; return "";}
+    virtual void checkCaught(Player *p){ (void) p; return;}
+    virtual QString chasePlayerUPDOWN(Player *p){ (void) p; return "";}
+
+    template<typename T>
+    void printClassArray(T *s)
+    {
+        for(int i = 0;i < NUM_OF_ROOMS; i ++){
+          qDebug() << (*s)[i];
+        }
+    }
 };
 
 #endif // MYPLAYER_H

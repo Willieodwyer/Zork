@@ -9,7 +9,7 @@ class Monster : public Player
 {
 public:
     Monster();
-    ~Monster();
+    virtual ~Monster();
     int wrongMove;
     ScenarioBox sbox;
     QString chasePlayerUPDOWN(Player *p);

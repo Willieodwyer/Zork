@@ -15,16 +15,15 @@
 //:/assets/assets/pacman-ghost-128.png
 
 
-Player::Player(){
+Player::Player() :
+    roomIndex(0)
+{
     setPixmap(QPixmap(":/assets/assets/pacman-ghost-128.png"));
     setScale(SCALE);
     setPos(x()+(DISTANCE*4),y()+(DISTANCE*21));
     init();
-    roomIndex = 0;
     map = new Map();
-//    for(int i = 0;i < NUM_OF_ROOMS; i ++){
-//        qDebug() << (*map)[i];
-//    }
+    printClassArray(map);
     a = true;
 }
 
